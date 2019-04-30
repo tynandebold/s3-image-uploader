@@ -12,7 +12,7 @@ app.get('/_health', (req, res) => {
   });
 });
 
-app.post('/image-upload', (req, res) => {
+app.post('/upload-image', (req, res) => {
   upload(req, res, err => {
     if (err) {
       return res.status(500).send({
