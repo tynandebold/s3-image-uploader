@@ -16,7 +16,7 @@ app.post('/upload-image', (req, res) => {
   upload(req, res, err => {
     if (err) {
       return res.status(500).send({
-        errors: [{ title: 'Image upload error', detail: err }]
+        errors: [{ title: 'Image upload error', detail: err.message }]
       });
     }
 
